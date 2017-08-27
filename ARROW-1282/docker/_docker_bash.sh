@@ -2,7 +2,7 @@
 
 pushd /io
 
-source ./env.sh
+source /env.sh
 
 pushd arrow/cpp/build
 make install

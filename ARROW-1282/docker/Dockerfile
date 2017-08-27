@@ -15,3 +15,6 @@ RUN conda create -y -q -n pyarrow-dev \
       python=3.6 numpy six setuptools cython pandas pytest \
       cmake flatbuffers rapidjson boost-cpp thrift-cpp snappy zlib \
       brotli jemalloc lz4-c zstd -c conda-forge
+ADD env.sh /env.sh
+ADD build_jemalloc.sh /build_jemalloc.sh
+RUN /build_jemalloc.sh

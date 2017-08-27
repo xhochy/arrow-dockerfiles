@@ -4,14 +4,7 @@ set -ex
 
 pushd /io
 
-source activate pyarrow-dev
-
-export ARROW_BUILD_TYPE=release
-
-export ARROW_BUILD_TOOLCHAIN=$CONDA_PREFIX
-export PARQUET_BUILD_TOOLCHAIN=$CONDA_PREFIX
-export ARROW_HOME=$CONDA_PREFIX
-export PARQUET_HOME=$CONDA_PREFIX
+source /env.sh
 
 # rm -rf arrow/cpp/build
 mkdir -p arrow/cpp/build
